@@ -1,0 +1,16 @@
+{
+  "name": "tag",
+  "description": "Migrate from canary to prod triggered by creation of any tag",
+  "filename": "build/tag-cloudbuild.yaml",
+  
+  "triggerTemplate": {
+    "projectId": "qwiklabs-gcp-01-b09777961efc",
+    "repoName": "gke-progression",
+    "tagName": ".*"
+  },
+  "substitutions": {
+    "_ZONE": "us-central1-c",
+    "_CLUSTER": "mycluster"
+  }
+
+}
